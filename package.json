@@ -6,9 +6,7 @@
   "description": "自己研发的前端工具库，基于Webpack构建",
   "scripts": {
     "commit": "git cz",
-    "start": "webpack serve --open --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js",
-    "buildNpm": "webpack --config ./webpack/webpack.npm.js",
     "release": "standard-version",
     "push": "git push --follow-tags origin develop"
   },

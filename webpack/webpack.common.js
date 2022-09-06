@@ -1,38 +1,30 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 const webpack = require('webpack'); // 用于访问内置插件
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const path = require('path');
 
-/**
- * @type {import('webpack'.Configuration)}
- * 补充webpack配置文件的vscode语法提示
- */
 module.exports = {
-	entry: {
-		main: path.resolve(__dirname, '../src/index.tsx'),
-	},
+	entry: path.resolve(__dirname, '../src/utils/index.ts'),
 	output: {
 		path: path.resolve(__dirname, '../dist'),
-		filename: '[name].[contenthash].bundle.js',
+		filename: 'utils.js',
 		library: {
-			name: 'kinda',
+			name: '@kinda/utils',
 			type: 'umd',
-			export: 'default',
 		},
 	},
-	optimization: {
-		minimize: true,
-		splitChunks: {
-			chunks: 'all',
-		},
-		runtimeChunk: 'single',
-		minimizer: [
-			new TerserPlugin({
-				exclude: /\.js(\?.*)?$/i,
-			}),
-		],
-	},
+	// optimization: {
+	// 	minimize: true,
+	// 	splitChunks: {
+	// 		chunks: 'all',
+	// 	},
+	// 	runtimeChunk: 'single',
+	// 	minimizer: [
+	// 		new TerserPlugin({
+	// 			test: /\.js(\?.*)?$/i,
+	// 		}),
+	// 	],
+	// },
 	module: {
 		rules: [
 			{ test: /\.txt$/, use: 'raw-loader' },
@@ -72,20 +64,8 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [
-		new webpack.ProgressPlugin(),
-		// 插件自动生成html并挂载js文件
-		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, '../public/index.html'),
-			title: 'Kinda App',
-		}),
-		new CleanWebpackPlugin(),
-	],
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js'],
-		alias: {
-			'@/**': '../src/**',
-		},
 	},
-	externals: {},
+	plugins: [new webpack.ProgressPlugin(), new CleanWebpackPlugin()],
 };
