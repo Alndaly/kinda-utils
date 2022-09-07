@@ -1,2 +1,3 @@
 # kinda-framework
-自己做的前端框架（基于webpack
+
+自己封装好了的一些前端方法库（基于webpack打包）

@@ -11,7 +11,7 @@
     "push": "git push --follow-tags origin develop"
   },
   "repository": {
-    "url": "https://github.com/Alndaly/kinda-framework.git"
+    "url": "https://github.com/Alndaly/kinda-utils.git"
   },
   "license": "MIT",
   "devDependencies": {
