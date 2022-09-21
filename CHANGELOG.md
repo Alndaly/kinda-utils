@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/Alndaly/kinda-utils/compare/v0.0.9...v0.0.10) (2022-09-21)
+
+
+### Features
+
+* 🎸 增加时间函数和缓存函数 ([6bbf1eb](https://github.com/Alndaly/kinda-utils/commit/6bbf1ebc3781a129a70fc6f605a138cbb01c1f90))
+
 ### [0.0.9](https://github.com/Alndaly/kinda-utils/compare/v0.0.8...v0.0.9) (2022-09-07)
 
 
