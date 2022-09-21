@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/Alndaly/kinda-utils/compare/v0.0.11...v0.0.12) (2022-09-21)
+
+
+### Features
+
+* 🎸 导出部分url方法 ([87cb01b](https://github.com/Alndaly/kinda-utils/commit/87cb01be0bbc2d4daba92413e40c700937edf022))
+
 ### [0.0.11](https://github.com/Alndaly/kinda-utils/compare/v0.0.10...v0.0.11) (2022-09-21)
 
 ### [0.0.10](https://github.com/Alndaly/kinda-utils/compare/v0.0.9...v0.0.10) (2022-09-21)
