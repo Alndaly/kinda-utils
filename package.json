@@ -1,6 +1,7 @@
 {
   "name": "@kinda/utils",
   "version": "0.0.11",
+  "files": ["dist/"],
   "main": "dist/utils.js",
   "author": "Kinda Hall",
   "description": "自己研发的前端工具库，基于Webpack构建",
