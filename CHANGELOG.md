@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/Alndaly/kinda-utils/compare/v0.0.12...v0.0.13) (2022-09-26)
+
+
+### Features
+
+* 🎸 修复post请求多余的? ([edac2a8](https://github.com/Alndaly/kinda-utils/commit/edac2a8f84e83ee32cac9c9550c7cbbd8967adfa))
+
 ### [0.0.12](https://github.com/Alndaly/kinda-utils/compare/v0.0.11...v0.0.12) (2022-09-21)
 
 
