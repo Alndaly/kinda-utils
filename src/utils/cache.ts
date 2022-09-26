@@ -31,7 +31,9 @@ export default {
             }
         } catch (e) {
             console.error(e)
+            return false
         }
+        return false
     },
 
     // 直接获取，不做时间判断处理

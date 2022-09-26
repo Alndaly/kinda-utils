@@ -25,7 +25,7 @@ export const statusCodeMsg = {
     if (contentType) {
       const parts = contentType.split(';');
       if (parts.length === 2) {
-        const [, value] = parts[1].split('=');
+        const [, value] = parts[1]!.split('=');
         const encoding = value && value.trim();
         if (encoding) {
           charset = encoding;

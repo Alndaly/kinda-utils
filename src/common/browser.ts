@@ -75,12 +75,13 @@ export function getCookie(cookieName: string): string | undefined {
   const name = `${cookieName}=`;
   const cookies = document.cookie.split(';');
 
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i].trim();
-    if (cookie.indexOf(name) === 0) {
-      return cookie.substring(name.length, cookie.length);
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i]!.trim();
+      if (cookie.indexOf(name) === 0) {
+        return cookie.substring(name.length, cookie.length);
+      }
     }
-  }
+
   return undefined;
 }
 
