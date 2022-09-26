@@ -88,6 +88,7 @@ export function getCookie(cookieName: string): string | undefined {
  * query 参数地址拼接
  * */
 export function joinUrl(url: string, qs: string): string {
+  if (!qs) return url;
   if (url.indexOf('?') >= 0) {
     return `${url}&${qs}`;
   }

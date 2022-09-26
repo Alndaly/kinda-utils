@@ -1,4 +1,5 @@
 import * as qs from 'qs';
+import _ from 'lodash'
 
 import { isPlainObject } from './type';
 
@@ -8,6 +9,7 @@ import { isPlainObject } from './type';
  * @param {boolean} disableEncode 是否禁用默认的encodeURIComponent行为
  */
 export function objectToQs(searchParams: any, disableEncode?: any, options?: any) {
+  if (_.isEmpty(searchParams)) return ''
   return qs.stringify(searchParams, {
     encode: !disableEncode,
     arrayFormat: 'indices',
