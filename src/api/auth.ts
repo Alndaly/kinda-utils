@@ -1,6 +1,10 @@
 import { post } from "../utils/request";
 
-export const getToken = async (url: string, body: any = {}, client_id: string, client_secret: string) => {
+export const getToken = async (url: string, body: any = {}, clientInfo: any) => {
+    const {
+        client_id,
+        client_secret
+    } = clientInfo;
     return post(
         url,
         body,
@@ -9,6 +13,6 @@ export const getToken = async (url: string, body: any = {}, client_id: string, c
                 'Authorization': 'Basic ' + btoa(client_id + ":" + client_secret)
             }
         }
-    )
-}
+    );
+};
 
