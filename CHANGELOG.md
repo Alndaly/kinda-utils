@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.23](https://github.com/Alndaly/kinda-utils/compare/v0.0.22...v0.0.23) (2022-11-09)
+
+
+### Features
+
+* 🎸 优化webpack alias配置 ([47830e5](https://github.com/Alndaly/kinda-utils/commit/47830e5f955394ee0ae4ce5b25ce83ddab6c32cb))
+
 ### [0.0.22](https://github.com/Alndaly/kinda-utils/compare/v0.0.21...v0.0.22) (2022-11-09)
 
 ### [0.0.20](https://github.com/Alndaly/kinda-utils/compare/v0.0.19...v0.0.20) (2022-11-09)
