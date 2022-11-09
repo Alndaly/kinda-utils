@@ -48,5 +48,11 @@
     "target": "ESNext",
     "jsx": "react",
     "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   }
 }

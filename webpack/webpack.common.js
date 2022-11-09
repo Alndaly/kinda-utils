@@ -66,6 +66,9 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js'],
+		alias: {
+			'@': '/src',
+		},
 	},
 	plugins: [new webpack.ProgressPlugin(), new CleanWebpackPlugin()],
 };

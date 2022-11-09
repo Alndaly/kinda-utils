@@ -1,4 +1,4 @@
-import { post } from "../utils/request";
+import { post } from "@/utils/request";
 
 
 interface TokenGetApiBody {
