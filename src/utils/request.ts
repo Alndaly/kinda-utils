@@ -6,7 +6,7 @@ import {
     objectToQs,
     stringify,
 } from '../common/index';
-import { statusCodeMsg, toJson } from './handlers';
+import { statusCodeMsg } from './handlers';
 
 export type Params = Record<string, any>;
 
@@ -38,20 +38,17 @@ export const request = async (url: string, params: Params = {}, options: Request
     const realOptions: RequestInit = { ...defaultOptions, ...options };
 
     debug.req(`${method}: ${realUrl} options: %o`, realOptions);
-    return fetch(realUrl, realOptions).then((response: Response) => {
-        const statuCode = response.status;
-        if (statuCode >= 200 && statuCode < 300) {
-            return toJson(response).then((result: any) => {
-                debug.res(`${method}: ${realUrl}  result: %o`, result);
-                return result;
-            });
-        }
-        // @ts-ignore
-        const error = new Error(statusCodeMsg[statuCode] || response.statusText);
-        // @ts-ignore
-        error.__response = response;
-        return Promise.reject(error);
-    });
+    const response = await fetch(realUrl, realOptions)
+    if (response.status >= 200 && response.status < 300) {
+        const result = await response.json();
+        debug.res(`${method}: ${realUrl}  result: %o`, result);
+        return result;
+    }
+    // @ts-ignore
+    const error = new Error(statusCodeMsg[response.status] || response.statusText);
+    // @ts-ignore
+    error.__response = response;
+    throw (error);
 };
 
 /**
