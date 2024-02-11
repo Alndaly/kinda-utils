@@ -1,0 +1,39 @@
+{
+	"name": "@kinda/utils",
+	"version": "0.0.1",
+	"private": false,
+	"description": "常用的一些方法",
+	"main": "dist/index.js",
+	"module": "dist/index.es.js",
+	"type": "module",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/*"
+	],
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build && tsc",
+		"preview": "vite preview"
+	},
+	"author": "Kinda Hall <1142704468@qq.com>",
+	"license": "MIT",
+	"keywords": [
+		"utils"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Alndaly/kinda-utils"
+	},
+	"dependencies": {
+		"dayjs": "^1.11.10",
+		"lodash": "^4.17.21",
+		"path": "^0.12.7",
+		"qs": "^6.11.2"
+	},
+	"devDependencies": {
+		"@types/lodash": "^4.14.202",
+		"@types/node": "^20.11.17",
+		"@types/qs": "^6.9.11",
+		"vite": "^5.1.1"
+	}
+}
