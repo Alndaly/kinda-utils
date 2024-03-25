@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": false,
 	"description": "常用的一些方法",
-	"main": "dist/index.js",
+	"main": "dist/index.es.js",
 	"module": "dist/index.es.js",
 	"type": "module",
 	"types": "dist/index.d.ts",
