@@ -64,7 +64,7 @@ export function kindaStringify(params: any = {}) {
 /**
  * promise 结果转数组
  */
-export function to(promise: Promise<any>): Promise<any[]> {
+export function to<T>(promise: Promise<T>): Promise<[T, null] | [null, any]> {
   return new Promise((resolve) => {
     promise.then(
       (res) => resolve([res, null]),
